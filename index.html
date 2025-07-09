@@ -4,58 +4,74 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Comfort Shuttle Services</title>
-  <meta name="description" content="Comfort Shuttle Services provides safe and reliable transport across Limpopo, Gauteng, and beyond.">
-  <meta name="keywords" content="shuttle, transport, Limpopo, Gauteng, airport transfer, private hire">
+  <meta name="description" content="Comfort Transport Services offers reliable shuttle and transport solutions in Limpopo, Gauteng, and beyond.">
+  <meta name="keywords" content="shuttle, transport, Comfort Shuttle Services, booking, travel, Limpopo, Gauteng">
   <meta name="author" content="Chegofatso M Mogadima">
   <link rel="stylesheet" href="style.css"/>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    #faq h3 {
+      text-align: center;
+    }
+    hr {
+      margin: 20px 0;
+      border: none;
+      border-top: 2px solid #ccc;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <img src="logo.jpeg" alt="Comfort Shuttle Services Logo" class="logo">
-    <h1>Comfort Shuttle Services (Pty) Ltd</h1>
+    <img src="logo.jpeg" alt="Comfort Shuttle Logo" class="logo" />
+    <h1>Comfort Transport Services (Pty) Ltd</h1>
     <p class="tagline">Smooth rides, superior comfort</p>
     <nav>
-      <a href="#">Home</a>
-      <a href="#vehicles">Services</a>
-      <a href="#">Booking</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="#services">Services</a>
+      <a href="#booking">Booking</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <section class="hero">
+  <section id="home" class="hero">
     <h2>Reliable Shuttle & Transport Services</h2>
     <p>Serving Limpopo, Gauteng, and beyond.</p>
   </section>
 
-  <section class="services">
+  <section id="services" class="services">
     <h3>Our Services</h3>
     <ul>
       <li>Airport Transfers</li>
       <li>City to City Shuttle</li>
       <li>Corporate Transport</li>
       <li>Private Hire</li>
-      <li>Trips</li>
+      <li>Group Trips</li>
     </ul>
   </section>
 
-  <section class="contact-form">
-    <h3>Book a Ride</h3>
-    <form action="https://formsubmit.co/chego331@gmail.com" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Email" required />
-      <input type="text" name="pickup" placeholder="Pickup Location" required />
-      <input type="text" name="destination" placeholder="Destination" required />
-      <input type="date" name="date" placeholder="Date" required id="date"/>
+  <section id="booking" class="contact-form">
+  <h3>Book a Ride</h3>
+  <form action="https://formsubmit.co/chego331@gmail.com" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Email" required />
+    <input type="text" name="pickup" placeholder="Pickup Location" required />
+    <input type="text" name="destination" placeholder="Destination" required />
+    <input type="number" name="phone number" placeholder="Phone Number" required />
+    <input type="date" name="date" required />
+    
+    <!-- Message textarea added -->
+    <textarea name="message" placeholder="Additional details or special requests" rows="4"></textarea>
+    
+    <input type="hidden" name="_captcha" value="false" />
+    <input type="hidden" name="_subject" value="New Booking Request from Website" />
+    <input type="hidden" name="_template" value="table" />
+    <button type="submit">Submit Booking</button>
+  </form>
+</section>
 
-      <!-- Hidden fields for FormSubmit -->
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_subject" value="New Booking Request from Website">
-      <input type="hidden" name="_template" value="table">
-
-      <button type="submit">Submit Booking</button>
-    </form>
-  </section>
 
   <section id="vehicles" class="gallery">
     <h3>Our Fleet</h3>
@@ -63,10 +79,10 @@
     <div class="gallery-row">
       <div class="vehicle"><img src="car1.jpeg" alt="Vehicle 1"><p>Your smooth ride to anywhere begins here!</p></div>
       <div class="vehicle"><img src="car2.jpeg" alt="Vehicle 2"><p>Plenty of space, plenty of comfort – just the way you like it.</p></div>
-      <div class="vehicle"><img src="Car3.jpeg" alt="Vehicle 3"><p>Travel in style, arrive with a smile.</p></div>
-      <div class="vehicle"><img src="Car4.jpeg" alt="Vehicle 4"><p>Your happy journey starts the moment you step inside.</p></div>
-      <div class="vehicle"><img src="Car5.jpeg" alt="Vehicle 5"><p>Whether it's a short trip or a long ride – we’ve got you covered.</p></div>
-      <div class="vehicle"><img src="Car6.jpeg" alt="Vehicle 6"><p>Wherever you go, we take you there safely and comfortably.</p></div>
+      <div class="vehicle"><img src="car3.jpeg" alt="Vehicle 3"><p>Travel in style, arrive with a smile.</p></div>
+      <div class="vehicle"><img src="car4.jpeg" alt="Vehicle 4"><p>Your happy journey starts the moment you step inside.</p></div>
+      <div class="vehicle"><img src="car5.jpeg" alt="Vehicle 5"><p>Whether it's a short trip or a long ride – we’ve got you covered.</p></div>
+      <div class="vehicle"><img src="car6.jpeg" alt="Vehicle 6"><p>Wherever you go, we take you there safely and comfortably.</p></div>
     </div>
   </section>
 
@@ -75,13 +91,15 @@
     <ul>
       <li><strong>Is the deposit refundable?</strong><br>No, the deposit is non-refundable. It secures your spot and the balance can be paid as per the package terms.</li>
       <li><strong>Do you accommodate large groups?</strong><br>Yes, we cater to all group sizes. Contact us for group rates and special arrangements.</li>
-      <li><strong>How far in advance should I book?</strong><br>We recommend booking early, especially during peak seasons, to secure your spot. We're available 24/7.</li>
-      <li><strong>What happens if my trip is canceled?</strong><br>If we cancel due to unforeseen issues, you'll get a full refund or reschedule option. For personal cancellations, please check our policy.</li>
+      <li><strong>How far in advance should I book?</strong><br>We recommend booking early, especially during peak seasons. We’re available 24/7.</li>
+      <li><strong>What happens if my trip is canceled?</strong><br>If we cancel due to unforeseen issues, you’ll receive a full refund or the option to reschedule. For personal cancellations, refer to our policy.</li>
     </ul>
   </section>
 
   <footer>
-    <p>© 2025 Comfort Shuttle Services (Pty) Ltd | Contact: comforttransport07@gmail.com | 072 071 9955</p>
+    <hr>
+    <p>comforttransport07@gmail.com | 072 071 9955</p>
+    <p>© 2025 Comfort Shuttle Services (Pty) Ltd</p>
     <p>Designed by Chegofatso M Mogadima</p>
   </footer>
 
