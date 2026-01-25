@@ -108,6 +108,34 @@
     </div>
   </section>
 
+  <section id="reviews">
+  <h2>Customer Reviews</h2>
+  <p>We value your feedback 💬</p>
+
+  <form action="https://formsubmit.co/chego331@gmail.com" method="POST">
+
+    <input type="hidden" name="_subject" value="New Customer Review">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="thankyou.html">
+
+    <input type="text" name="reviewer_name" placeholder="Your Name" required>
+
+    <select name="rating" required>
+      <option value="">Select Rating</option>
+      <option>⭐⭐⭐⭐⭐</option>
+      <option>⭐⭐⭐⭐</option>
+      <option>⭐⭐⭐</option>
+      <option>⭐⭐</option>
+      <option>⭐</option>
+    </select>
+
+    <textarea name="review_message" placeholder="Write your review..." required></textarea>
+
+    <button type="submit">Submit Review</button>
+  </form>
+</section>
+
+  
   <section id="faq">
     <h3>Frequently Asked Questions</h3>
     <ul>
@@ -128,6 +156,7 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
