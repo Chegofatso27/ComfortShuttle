@@ -211,6 +211,31 @@ footer {
   100% { transform: translateX(-200%); }
 }
 
+.faq-item {
+  margin: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 15px;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+}
+
+.faq-answer {
+  display: none;
+  padding: 0 15px 15px 15px;
+  font-size: 15px;
+  color: #555;
+}
+
+
+
 
 
 
