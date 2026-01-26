@@ -168,5 +168,50 @@ footer {
   background-color: #1ebe5d;
 }
 
+.review-slider {
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  animation: slide 12s infinite;
+}
+
+.review-card {
+  flex: 0 0 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.review-card h4 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.review-card p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  33% { transform: translateX(0); }
+  40% { transform: translateX(-100%); }
+  73% { transform: translateX(-100%); }
+  80% { transform: translateX(-200%); }
+  100% { transform: translateX(-200%); }
+}
+
+
+
 
 
