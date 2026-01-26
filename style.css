@@ -244,7 +244,7 @@ footer {
   color: white;
   border-radius: 50px;
   text-align: center;
-  font-size: 30px;
+  font-size: 26px;
   box-shadow: 2px 2px 5px #999;
   z-index: 100;
   display: flex;
@@ -256,6 +256,8 @@ footer {
 .facebook-float:hover {
   background-color: #2d4373;
 }
+
+
 
 
 
