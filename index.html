@@ -115,7 +115,8 @@
     
 
 
-  <form action="https://formsubmit.co/chego331@gmail.com" method="POST">
+  <form id="reviewForm" action="https://formsubmit.co/chego331@gmail.com" method="POST">
+
 
     <input type="hidden" name="_subject" value="New Customer Review">
     <input type="hidden" name="_captcha" value="false">
@@ -157,8 +158,52 @@
   </footer>
 
   <script src="script.js"></script>
+
+  <script>
+const form = document.getElementById("reviewForm");
+const WEBAPP_URL = "https://script.google.com/macros/s/AKfycbxGmdi96toNESzQFieHkoFqg63AHSQE7lb7rSD5ckZRtcSKAMga6C-53phenvwILkNm/exec";
+
+form.addEventListener("submit", async (e) => {
+  const data = {
+    reviewer_name: form.reviewer_name.value,
+    rating: form.rating.value,
+    review_message: form.review_message.value
+  };
+
+  // Send review to Google Sheets
+  await fetch(WEBAPP_URL, {
+    method: "POST",
+    body: JSON.stringify(data)
+  });
+});
+</script>
+
+  <script>
+fetch("https://docs.google.com/spreadsheets/d/https://script.google.com/macros/s/AKfycbxGmdi96toNESzQFieHkoFqg63AHSQE7lb7rSD5ckZRtcSKAMga6C-53phenvwILkNm/exec/gviz/tq?tqx=out:json")
+  .then(res => res.text())
+  .then(data => {
+    const jsonData = JSON.parse(data.substring(47).slice(0, -2));
+    const rows = jsonData.table.rows;
+
+    const reviewsList = document.getElementById("reviews-list");
+    reviewsList.innerHTML = "";
+
+    rows.forEach(row => {
+      reviewsList.innerHTML += `
+        <div class="review-card">
+          <h4>${row.c[0].v}</h4>
+          <p>${row.c[1].v}</p>
+          <p>${row.c[2].v}</p>
+        </div>
+      `;
+    });
+  });
+</script>
+
+
 </body>
 </html>
+
 
 
 
