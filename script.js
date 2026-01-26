@@ -46,3 +46,15 @@ exports.sendBookingToBusiness = functions.database
         console.error("❌ Error sending email:", error);
       });
   });
+const faqQuestions = document.querySelectorAll(".faq-question");
+
+faqQuestions.forEach((question) => {
+  question.addEventListener("click", () => {
+    const answer = question.nextElementSibling;
+
+    // Toggle dropdown
+    answer.style.display = answer.style.display === "block" ? "none" : "block";
+  });
+});
+
+
