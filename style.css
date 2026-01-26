@@ -234,6 +234,31 @@ footer {
   color: #555;
 }
 
+.facebook-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 90px;  /* above WhatsApp */
+  right: 20px;
+  background-color: #3b5998;
+  color: white;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 5px #999;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.facebook-float:hover {
+  background-color: #2d4373;
+}
+
+
+
 
 
 
