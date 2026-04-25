@@ -397,6 +397,117 @@
     }
     .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
 
+    /* ─── PRESS ─── */
+    .press-section {
+      padding: 90px 24px;
+      background: var(--off-white);
+    }
+    .press-header { text-align: center; margin-bottom: 52px; }
+
+    .press-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 56px; align-items: start;
+    }
+
+    .press-image-wrap { position: relative; }
+
+    .press-outlet-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 0.72rem; font-weight: 800;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      padding: 6px 14px; border-radius: 4px;
+      margin-bottom: 14px;
+    }
+    .press-outlet-badge i { font-size: 0.85rem; }
+
+    .press-image-frame {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 12px 48px rgba(13,30,61,0.18);
+      border: 3px solid var(--gold);
+    }
+    .press-image-frame img {
+      width: 100%; display: block;
+      transition: transform 0.4s;
+    }
+    .press-image-frame:hover img { transform: scale(1.02); }
+
+    .press-caption {
+      margin-top: 12px;
+      font-size: 0.78rem;
+      color: var(--text-light);
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    .press-content { display: flex; flex-direction: column; gap: 20px; }
+
+    .press-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      color: var(--navy);
+      line-height: 1.3;
+      border-left: 4px solid var(--gold);
+      padding-left: 18px;
+    }
+
+    .press-byline {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text-light);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .press-body {
+      display: flex; flex-direction: column; gap: 14px;
+    }
+    .press-body p {
+      font-size: 0.93rem;
+      color: var(--text-mid);
+      line-height: 1.8;
+    }
+
+    .press-quote {
+      background: var(--navy);
+      border-radius: 12px;
+      padding: 24px 26px;
+      position: relative;
+    }
+    .press-quote::before {
+      content: '"';
+      font-family: 'Playfair Display', serif;
+      font-size: 5rem; color: var(--gold);
+      opacity: 0.25;
+      position: absolute; top: 4px; left: 14px;
+      line-height: 1;
+    }
+    .press-quote p {
+      color: rgba(255,255,255,0.85);
+      font-size: 1rem;
+      line-height: 1.7;
+      font-style: italic;
+      position: relative; z-index: 1;
+    }
+    .press-quote cite {
+      display: block;
+      margin-top: 10px;
+      color: var(--gold);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-style: normal;
+      position: relative; z-index: 1;
+    }
+
+    @media (max-width: 768px) {
+      .press-inner { grid-template-columns: 1fr; gap: 32px; }
+    }
+
     /* ─── FOOTER ─── */
     footer {
       background: #080f1e; padding: 28px 24px;
@@ -501,6 +612,51 @@
             <i class="fas fa-location-dot"></i>
             <p><strong>Based in Polokwane</strong> — serving Limpopo, Gauteng, and all surrounding areas across South Africa.</p>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PRESS ─── -->
+  <section id="press" class="press-section">
+    <div class="press-header">
+      <p class="section-label">Media Coverage</p>
+      <h2 class="section-title">As Featured In The Press</h2>
+    </div>
+    <div class="press-inner">
+      <div class="press-image-wrap">
+        <div class="press-outlet-badge"><i class="fas fa-newspaper"></i> Polokwane Observer</div>
+        <div class="press-image-frame">
+          <img src="newspaper.jpeg" alt="Comfort Transport Services featured in the Polokwane Observer" />
+        </div>
+        <p class="press-caption">Founder Khuthadzo Rametsi featured in the Polokwane Observer — photographed with the vehicle he uses to transport patients.</p>
+      </div>
+
+      <div class="press-content">
+        <p class="press-byline">By Ronewa Phaladi — Polokwane Observer</p>
+        <h3 class="press-headline">Patient-focused transport service to access healthcare facilities</h3>
+
+        <div class="press-body">
+          <p>
+            Local businessman <strong>Khuthadzo Rametsi (27)</strong> is making a difference in the lives of healthcare patients through Comfort Transport Services, which provides reliable transport for individuals and businesses.
+          </p>
+          <p>
+            Rametsi founded the company in <strong>2024</strong> after identifying a gap in the market for safe and dependable transport, particularly for people who rely on mobility services to access healthcare facilities.
+          </p>
+          <p>
+            The business currently works with <strong>Bophelong Renal Care Dialysis</strong> and transports patients to Pietersburg Provincial Hospital, ensuring they reach their medical appointments on time and safely.
+          </p>
+        </div>
+
+        <div class="press-quote">
+          <p>It's not just about moving people from one place to another. It's about reliability, dignity, and making sure people reach the places that matter most in their lives.</p>
+          <cite>— Khuthadzo Rametsi, Founder</cite>
+        </div>
+
+        <div class="press-body">
+          <p>
+            His goal is to grow Comfort Transport Services into a trusted transport solution across Limpopo and build long-term relationships with hospitals, businesses and individuals — while continuing to improve the quality of service.
+          </p>
         </div>
       </div>
     </div>
